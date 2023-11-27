@@ -1,55 +1,76 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Solid.Core.Entities;
+using Solid.Core.Services;
+using Solid.Service;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace Swimming.Controllers
+namespace Solid.API.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
     public class CourseController : ControllerBase
     {
-        static List<Course> courses = new List<Course> { new Course { id = 1, name = "back", teacherId = 1 }, new Course { id = 3, name = "side", teacherId = 3 }, new Course { id = 2, name = "breast", teacherId = 2 } };
-        static int count=3;
+        private readonly    ICourseService _courseService;
+        public CourseController(ICourseService courseService)
+        {
+            _courseService = courseService;
+        }
 
         // GET: api/<CourseController>
         [HttpGet]
-        public List<Course> Get()
+        public IEnumerable<Course> Get()
         {
-            return courses;
+            return _courseService.GetAllCourses();
         }
 
         // GET api/<CourseController>/5
         [HttpGet("{id}")]
-        public Course Get(int id)
+        public ActionResult<Course> Get(int id)
         {
-            var c2 = courses.Find(x => x.id == id);
+            var c2 = _courseService.GetCourseById(id);
+            if (c2 == null)
+                return NotFound();
             return c2;
         }
 
         // POST api/<CourseController>
         [HttpPost]
-        public void Post([FromBody] Course c )
+        public ActionResult Post([FromBody] Course c)
         {
-            courses.Add(new Course { id = ++count, name =c.name, teacherId = c.teacherId });
+            //בדיקה למורה האם קיימת במאגר
+            //var t = _context.TeacherList.Find(x => x.id == c.teacherId);
+            //if (t == null)
+            //    return NotFound();
+            _courseService.AddCourse(c);    
+            return Ok();
+
 
         }
 
         // PUT api/<CourseController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Course c)
+        public ActionResult Put(int id, [FromBody] Course c)
         {
-            var c2=courses.Find(x => x.id == id);
-            c2.name=c.name; 
-            c2.teacherId=c.teacherId;
+            //בבדיקה למורה האם קיימת במאגר
+            //var t = _context.TeacherList.Find(x => x.id == c.teacherId);
+            //if (t == null)
+            //    return NotFound();
+            _courseService.UpdateCourse(id, c); 
+            return Ok();
         }
 
         // DELETE api/<CourseController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public ActionResult Delete(int id)
         {
-            var c = courses.Find(x => x.id == id);
-            courses.Remove(c);
+            //var c = _context.CoursesList.Find(x => x.id == id);
+            //if (c == null)
+            //    return NotFound();
+            //_context.CoursesList.Remove(c);
+            _courseService.DeleteCourse(id);
+            return Ok();
+
         }
     }
 }
