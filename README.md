@@ -1,35 +1,35 @@
 # Swimming
 ## swimming courses
 
-## הצגת כל הקורסים
+### הצגת כל הקורסים
 - https://Swimming.co.il/Course
-## הצגת קורס
+### הצגת קורס
 - https://Swimming.co.il/Course/{id}
-## יצירת קורס חדש
+### יצירת קורס חדש
 - https://Swimming.co.il/Course
-## עדכון קורס
+### עדכון קורס
 - https://Swimming.co.il/Course/{id}
-## מחיקת קורס
+### מחיקת קורס
 - https://Swimming.co.il/Course/{id}
-#תלמידים
-##הצגת כל התלמידים
+#
+### הצגת כל התלמידים
 - https://Swimming.co.il/Sudent
-##הצגת תלמיד
+### הצגת תלמיד
 - https://Swimming.co.il/Sudent/{id}
-##יצירת תלמיד חדש
+### יצירת תלמיד חדש
 - https://Swimming.co.il/Sudent
-##עדכון תלמיד
+### עדכון תלמיד
 - https://Swimming.co.il/Sudent/{id}
-##מחיקת תלמיד
+### מחיקת תלמיד
 - https://Swimming.co.il/Sudent/{id}
-#מורים
-##הצגת כל המורים
+#
+### הצגת כל המורים
 - https://Swimming.co.il/Sudent
-##הצגת מורה
+### הצגת מורה
 - https://Swimming.co.il/Sudent/{id}
-##יצירת מורה חדש 
+### יצירת מורה חדש 
 - https://Swimming.co.il/Sudent
-##עדכון מורה
+### עדכון מורה
 - https://Swimming.co.il/Sudent/{id}
-##מחיקת מורה
+### מחיקת מורה
 - https://Swimming.co.il/Sudent/{id}
