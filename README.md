@@ -1,15 +1,15 @@
 # Swimming
-swimming courses
-#קורסים
-##הצגת כל הקורסים
+## swimming courses
+
+## הצגת כל הקורסים
 - https://Swimming.co.il/Course
-##הצגת קורס
+## הצגת קורס
 - https://Swimming.co.il/Course/{id}
-##יצירת קורס חדש
+## יצירת קורס חדש
 - https://Swimming.co.il/Course
-##עדכון קורס
+## עדכון קורס
 - https://Swimming.co.il/Course/{id}
-##מחיקת קורס
+## מחיקת קורס
 - https://Swimming.co.il/Course/{id}
 #תלמידים
 ##הצגת כל התלמידים
