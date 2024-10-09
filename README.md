@@ -1,35 +1,35 @@
 # Swimming
-## swimming courses
+## registration system for swimming courses | API's:
 
-### הצגת כל הקורסים
+### get all courses
 - https://Swimming.co.il/Course
-### הצגת קורס
+### get course
 - https://Swimming.co.il/Course/{id}
-### יצירת קורס חדש
+### add course
 - https://Swimming.co.il/Course
-### עדכון קורס
+### put course
 - https://Swimming.co.il/Course/{id}
-### מחיקת קורס
+### delete course
 - https://Swimming.co.il/Course/{id}
 #
-### הצגת כל התלמידים
+### get all students
 - https://Swimming.co.il/Sudent
-### הצגת תלמיד
+### get student
 - https://Swimming.co.il/Sudent/{id}
-### יצירת תלמיד חדש
+### add student
 - https://Swimming.co.il/Sudent
-### עדכון תלמיד
+### put student
 - https://Swimming.co.il/Sudent/{id}
-### מחיקת תלמיד
+### delete student
 - https://Swimming.co.il/Sudent/{id}
 #
-### הצגת כל המורים
+### get all leaders
 - https://Swimming.co.il/Sudent
-### הצגת מורה
+### get leader
 - https://Swimming.co.il/Sudent/{id}
-### יצירת מורה חדש 
+### add leader 
 - https://Swimming.co.il/Sudent
-### עדכון מורה
+### put leader
 - https://Swimming.co.il/Sudent/{id}
-### מחיקת מורה
+### delete leader
 - https://Swimming.co.il/Sudent/{id}
